@@ -1,6 +1,6 @@
 # James-Simpko-io
 
-
+James Simpko
 👋 Hi, I’m James Simpko
 👀 I’m interested in ... Hiking, sports, family time
 🌱 I’m currently learning ... computer programming, construction work
