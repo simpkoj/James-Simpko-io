@@ -26,6 +26,8 @@ h2{
 
  }
 
+
+ 
 body {
     height: 100vh;
     background-color: rgba(133, 136, 132, 0.945);
@@ -37,9 +39,6 @@ body {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-
-
-    
 
 
 }
@@ -81,8 +80,68 @@ body {
     margin: 0 auto;
     padding-left: 1em;
     background-color: red;
-    
+}
 
+/*Tablet Styles*/
+@media (max-width: 1024px) {
+    body {
+        font-size: medium;
+        padding-left: 0.5em;
+    }
+
+    #navigation ul {
+        gap: 2em;
+    }
+
+    #name {
+        font-size: 5rem;
+        
+        
+    }
+
+    h2 {
+        font-size: 2.5em;
+        color: black;
+        
+    }
+
+    .column {
+        width: 45%;
+        font-size: 0.8em;
+        column-gap: 2em;
+        background-color: white;
+        color: red;
+        
+    }
 }
 
 
+/*Mobile Styles*/
+@media (max-width: 768px) {
+    body {
+        font-size: small;
+        padding-left: 0.5em;
+       
+    }
+
+    #navigation ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #name {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        color: white;
+    }
+
+    .column {
+        width: 100%;
+        font-size: 0.7em;
+        column-gap: 1em;
+        padding-left: 0.5em;
+    }
+}
