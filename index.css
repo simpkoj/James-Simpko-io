@@ -61,6 +61,7 @@ body {
 
 #about, #experience, #skills, #projects, #connect {
     scroll-margin-top: 3em;
+  
 }
 
 .column {
@@ -80,6 +81,7 @@ body {
     margin: 0 auto;
     padding-left: 1em;
     background-color: red;
+    
 }
 
 /*Tablet Styles*/
