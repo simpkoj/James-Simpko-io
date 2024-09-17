@@ -114,10 +114,11 @@ const userName = 'simpkoj';
 fetch(`https://api.github.com/users/${userName}/repos`)
   .then((response) => {
     if(!response.ok){
-     return response.text();
-    } else {
-      throw new Error("Failed to fetch repositories");
+   
+        throw new Error("Failed to fetch repositories");
     }
+    return response.json();
+    
     })
 .then((data) => {
     const repositories = JSON.parse(data);
