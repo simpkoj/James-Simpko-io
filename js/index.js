@@ -1,20 +1,20 @@
-// Create and append footer
+
 const footer = document.createElement("footer");
 document.body.appendChild(footer);
 
-// Set up copyright information
+
 const today = new Date();
 const thisYear = today.getFullYear();
 const copyright = document.createElement('p');
 copyright.innerHTML = `© ${thisYear} James Simpko`; 
 footer.appendChild(copyright);
 
-// Set up skills list
+
 const skills = ["JavaScript", "HTML", "CSS", "GitHub"];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 
-// Clear existing skills list (if any) to avoid duplicates
+
 skillsList.innerHTML = '';
 
 skills.forEach(skill => {
@@ -23,21 +23,21 @@ skills.forEach(skill => {
     skillsList.appendChild(listItem);
 });
 
-// Set up message form and section
+
 let messageForm = document.querySelector("[name='leave message']");
 let messageSection = document.getElementById('message-section');
 let messageList = messageSection.querySelector('ul');
 messageSection.hidden = true;
 let idCounter = 0;
 
-// Function to create unique IDs
+
 function makeId() {
     return 'entry' + idCounter++;
 }
 
 let entryById = {};
 
-// Handle form submission
+
 messageForm.addEventListener('submit', (event) => {
     event.preventDefault();
     let name = event.target.usersName.value;
@@ -62,7 +62,7 @@ messageForm.addEventListener('submit', (event) => {
     messageSection.hidden = false;
 });
 
-// Function to create remove button
+
 function makeRemoveButton() {
     let removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
@@ -80,7 +80,7 @@ function makeRemoveButton() {
     return removeButton;
 }
 
-// Function to create edit button
+
 function makeEditButton() {
     let editButton = document.createElement('button');
     editButton.innerText = 'edit';
@@ -116,8 +116,8 @@ function makeEditButton() {
     return editButton;
 }
 
-// Fetch repositories from GitHub API
-const userName = 'James-Simpko-io';
+
+const userName = 'simpkoj';
 fetch(`https://api.github.com/users/${userName}/repos`)
     .then((response) => {
         if (!response.ok) {
@@ -125,8 +125,8 @@ fetch(`https://api.github.com/users/${userName}/repos`)
         }
         return response.json();
     })
-    .then((repositories) => {  // Directly use repositories instead of data
-        console.log(repositories);  // `repositories` is already a JavaScript object
+    .then((repositories) => { 
+        console.log(repositories);  
 
         const projectSection = document.getElementById("projects");
         let projectList = document.createElement("ul");
