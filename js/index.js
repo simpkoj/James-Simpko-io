@@ -19,6 +19,8 @@ skillsList.innerHTML = '';
 
 skills.forEach(skill => {
     const listItem = document.createElement('li');
+    skill.textContent = skills[i];
+    skillsList.appendChild(skill);
     listItem.textContent = skill;
     skillsList.appendChild(listItem);
 });
